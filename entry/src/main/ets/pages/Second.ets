@@ -5,14 +5,12 @@ import router from '@ohos.router';
 @Entry
 @Component
 struct Second {
-  @State message: string = 'Hi there'
 
   build() {
     Row() {
       Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
+        Image('https://res.vmallres.com/pimages//uomcdn/CN/pms/202403/gbom/6942103107719/428_428_5818B6A12914274ED24FB8FE47F1CD34mp.png')
+          .width(250)
         Button() {
           Text('Back')
             .fontSize(25)
