@@ -1,10 +1,11 @@
 {
   "app": {
-    "bundleName": "com.example.helloworld",
+    "bundleName": "com.example.helloworld", //整个应用的唯一标识
     "vendor": "example",
     "versionCode": 1000000,
     "versionName": "1.0.0",
-    "icon": "$media:app_icon",
+    "icon": "$media:app_icon", //读取resource/media
     "label": "$string:app_name"
   }
 }
+// 配置应用列表

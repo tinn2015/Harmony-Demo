@@ -11,6 +11,12 @@ struct Second {
       Column() {
         Image('https://res.vmallres.com/pimages//uomcdn/CN/pms/202403/gbom/6942103107719/428_428_5818B6A12914274ED24FB8FE47F1CD34mp.png')
           .width(250)
+          .interpolation(ImageInterpolation.High)
+
+        Text($r('app.string.width_label'))
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+
         Button() {
           Text('Back')
             .fontSize(25)
