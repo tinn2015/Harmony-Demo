@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\22981\\.ohos\\config\\auto_debug_HelloWorld_com.example.helloworld_70086000324265149.cer",
+          "storePassword": "0000001BBB9CF1DFCB523A883B8FF34439A2624778FD6291F3C30D377BA7F6FE7C13C6CB06DBFB91B74A12",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BD62A0894DB5AEE9A59743C2BDB584162A6A587CF66A4D32194599D1BEA211467F94A4389BBB90D",
+          "profile": "C:\\Users\\22981\\.ohos\\config\\auto_debug_HelloWorld_com.example.helloworld_70086000324265149.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\22981\\.ohos\\config\\auto_debug_HelloWorld_com.example.helloworld_70086000324265149.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [
