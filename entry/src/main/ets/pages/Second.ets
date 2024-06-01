@@ -5,10 +5,12 @@ import router from '@ohos.router';
 @Entry
 @Component
 struct Second {
-  @State imageWidth: number = 250
+  @State imageWidth: number = 240
   build() {
     Column() {
       Row() {
+        // https://copyright.bdstatic.com/vcg/creative/cc9c744cf9f7c864889c563cbdeddce6.jpg@h_1280
+        // https://res.vmallres.com/pimages//uomcdn/CN/pms/202403/gbom/6942103107719/428_428_5818B6A12914274ED24FB8FE47F1CD34mp.png
         Image('https://res.vmallres.com/pimages//uomcdn/CN/pms/202403/gbom/6942103107719/428_428_5818B6A12914274ED24FB8FE47F1CD34mp.png')
           .width(this.imageWidth)
           .interpolation(ImageInterpolation.High)
@@ -61,6 +63,7 @@ struct Second {
       .margin({
         top: 20
       })
+      .width('100%')
       .justifyContent(FlexAlign.SpaceEvenly)
 
       Slider({
