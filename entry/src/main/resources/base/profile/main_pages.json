@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/Second",
     "pages/Uiloop",
-    "pages/MeetingWeb"
+    "pages/MeetingWeb",
+    "pages/Concurrent"
   ]
 }

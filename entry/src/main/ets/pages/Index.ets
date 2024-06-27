@@ -4,7 +4,7 @@ import router from '@ohos.router';
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World'
+  @State message: string = 'Demo'
 
   build() {
     Column() {
@@ -55,6 +55,18 @@ struct Index {
           .margin({top: 20})
           .onClick(() => {
             router.pushUrl({url: 'pages/MeetingWeb'}).then(() => {
+              console.log('successful to jumping to the second page')
+            }).catch((err) => {
+              console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
+            })
+          })
+      }
+
+      Row() {
+        Button('并发示例')
+          .margin({top: 20})
+          .onClick(() => {
+            router.pushUrl({url: 'pages/Concurrent'}).then(() => {
               console.log('successful to jumping to the second page')
             }).catch((err) => {
               console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)

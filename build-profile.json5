@@ -5,9 +5,9 @@
         "name": "default",
         "material": {
           "certpath": "C:\\Users\\22981\\.ohos\\config\\openharmony\\auto_ohos_default_HelloWorld_com.example.helloworld.cer",
-          "storePassword": "0000001B02AF943A538B45D59EFE00BDF514A1B743055C83DB79B1DA54613C7B48785FA5AAB25CB3AECD5A",
+          "storePassword": "0000001B1EE72E9802FBE4345E2C20B9DE927B5A31F0EC821B2610EFC857E9D641C243AE1394402BD5EBFC",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001B2F9C363559EA351D5C5B1907848CE811D8F8FFE4F0AEB4EF948E0CA93E25D7F15665BEBF3F6E85",
+          "keyPassword": "0000001B238632212D94F43FFEA91C9F517FE4272266D6F666CC273EBFBA44BF12D6F855A88FFA86048C36",
           "profile": "C:\\Users\\22981\\.ohos\\config\\openharmony\\auto_ohos_default_HelloWorld_com.example.helloworld.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "C:\\Users\\22981\\.ohos\\config\\openharmony\\auto_ohos_default_HelloWorld_com.example.helloworld.p12"
