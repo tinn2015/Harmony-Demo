@@ -4,6 +4,7 @@
     "pages/Second",
     "pages/Uiloop",
     "pages/MeetingWeb",
-    "pages/Concurrent"
+    "pages/Concurrent",
+    "pages/DataStruct"
   ]
 }

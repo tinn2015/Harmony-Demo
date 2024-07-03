@@ -67,7 +67,17 @@ struct Index {
           .margin({top: 20})
           .onClick(() => {
             router.pushUrl({url: 'pages/Concurrent'}).then(() => {
-              console.log('successful to jumping to the second page')
+            }).catch((err) => {
+              console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
+            })
+          })
+      }
+
+      Row() {
+        Button('数据结构（容器）- 弹窗demo')
+          .margin({top: 20})
+          .onClick(() => {
+            router.pushUrl({url: 'pages/DataStruct'}).then(() => {
             }).catch((err) => {
               console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
             })
