@@ -1,15 +1,50 @@
+import image from '@ohos.multimedia.image'
+@CustomDialog
+struct ImagePreviewer {
+  controller?: CustomDialogController
+  @Link img: PixelMap
+  build () {
+    Image(this.img).objectFit(ImageFit.Contain).height(150)
+  }
+}
 
 @CustomDialog
 struct CustomDialogExample {
   @Link desc: string
-  @Link img: string
+  @Link img: PixelMap
   confirm: () => void = () => {}
+  dialogControllerTwo: CustomDialogController = new CustomDialogController({
+    builder: ImagePreviewer({
+      img: $img
+    }),
+    autoCancel: true,
+    alignment: DialogAlignment.Center
+  })
   controller?: CustomDialogController
+
   build() {
     Column() {
-      Text('特性说明')
+      Text('特性说明').fontSize(18).fontColor('#007bbb')
       Text(this.desc)
+      Image($r("app.media.arraylist")).width('100%').height(200).objectFit(ImageFit.Contain).onClick(async () => {
+        this.controller.close()
+        // 图片解析处理
+        const context = getContext(this)
+        console.log('context')
+        const resourceMgr = context.resourceManager
+        resourceMgr.getMediaContent($r('app.media.arraylist').id).catch(err => console.log(err))
+        // console.log('fileData', fileData)
+        // const buffer = fileData.buffer
+        // const imageSource = image.createImageSource(buffer);
+        // const pixelMap = await imageSource.createPixelMap();
+        // pixelMap.scale(2,2)
+        // this.img = pixelMap
+        // console.log('pixelMap', pixelMap)
+
+        this.dialogControllerTwo.open()
+      })
     }
+    .padding(20)
   }
 }
 
@@ -56,6 +91,7 @@ struct DataStruct {
         Flex({wrap: FlexWrap.Wrap, justifyContent: FlexAlign.SpaceBetween}) {
           Button('动态数组-ArrayList').fontSize(12).padding(10).height(30).margin({top: 10}).onClick(() => {
             this.desc = 'ArrayList即动态数组，可用来构造全局的数组对象。 当需要频繁读取集合中的元素时，推荐使用ArrayList。ArrayList依据泛型定义，要求存储位置是一片连续的内存空间，初始容量大小为10，并支持动态扩容，每次扩容大小为原始容量的1.5倍。'
+            this.img = 'arraylist.png'
             this.dialogController.open()
           })
           Button('单向链表-List').fontSize(12).padding(10).height(30).margin({top: 10})
